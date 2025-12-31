@@ -7,6 +7,7 @@ import ast
 import psutil
 import platform
 
+
 with open('ApiData.json', 'r', encoding='utf-8') as data:
     api_key = json.loads(data.read())["api_key"] # XXX.XXX.XXX
 app = Flask(__name__)
@@ -163,3 +164,4 @@ def Base(key:str, name:str):
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
